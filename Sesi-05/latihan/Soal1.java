@@ -48,18 +48,20 @@ public class Soal1 {
         System.out.print("Masukkan absen: ");
         absen = input.nextInt();
 
-        // input nilai
+        // input nilai lalu simpan ke variable nilai
         System.out.print("Masukkan nilai: ");
         nilai = input.nextInt();
 
         // panggil method
-        System.out.println("Hasil: " + nilaiSiswa(nama, absen, nilai));
+        System.out.println(nilaiSiswa(nama, absen, nilai));
 
         // tutup scanner
         input.close();
     }
 
     // method nilaiSiswa
+    // int... nilai berarti nilai bisa diinput lebih dari satu
+    // contoh input nilaiSiswa("nama", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     public static String nilaiSiswa(String nama, int absen, int... nilai) {
         // deklarasi variable
         int total = 0;
@@ -102,7 +104,7 @@ public class Soal1 {
         }
 
         // return hasil
-        return "Nama siswa: " + nama +
+        return "\nNama siswa: " + nama +
                 "\nAbsen: " + absen +
                 "\nRata-rata nilai: " + rataRata +
                 "\nHasil: " + hasil;
